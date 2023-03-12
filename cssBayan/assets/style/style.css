@@ -92,6 +92,15 @@ main {
 .look-back {
     background-image: url(../img/lookback.jpg);
 }
+.return {
+    background-image: url(../img/return.jpg);
+}
+.knowledge {
+    background-image: url(../img/knowledge.jpg);
+}
+.justDO {
+    background-image: url(../img/justDO.jpg);
+}
 
 @media (max-width: 821px) {
     body {
@@ -168,5 +177,24 @@ main {
     .bayan__item:hover .img {
         height: 25em;
         margin: 1rem auto;
+    }
+  }
+
+  @media screen and (max-width: 821px)  {
+    .close__btn {
+        opacity: 1;
+        visibility: visible;
+    }
+    .bayan__item {
+        color: black;
+    }
+  }
+  @media screen and (max-width: 481px)  {
+    .close__btn {
+        opacity: 1;
+        visibility: visible;
+    }
+    .bayan__item {
+        color: black;
     }
   }

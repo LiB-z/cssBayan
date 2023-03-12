@@ -1,0 +1,53 @@
+@media (max-width: 821px) {
+  body {
+    background-color: lightblue;
+  }
+  .main__title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0;
+  }
+  main {
+    gap: 1.25rem;
+    max-width: 80%;
+  }
+  .img {
+      width: 20rem;
+  }
+  .bayan_check:checked ~ .img, .bayan__item:hover .img {
+      height: 20rem;
+      margin: 1rem auto;
+  }
+  .bayan__content {
+      font-size: 1rem;
+  }
+}
+@media (max-width: 481px) {
+  body {
+    background-color: rgb(173, 230, 201);
+  }
+  main {
+      max-width: 90%;
+  }
+  .main__title {
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin: 0;
+  }
+  .img {
+      width: 25rem;
+  }
+  .bayan_check:checked ~ .img, .bayan__item:hover .img {
+      height: 25em;
+      margin: 1rem auto;
+  }
+  .bayan__content {
+      font-size: 0.7rem;
+      padding: .5rem 0;
+  }
+}
+@media (hover: hover) {
+    button:hover {
+      border: 3px solid green; /* solves sticky problem */
+    }
+}

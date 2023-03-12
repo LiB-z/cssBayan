@@ -2,10 +2,11 @@
 body {
     font-family: 'Fredoka One', cursive;
     background-color: antiquewhite;
+    overflow: hidden overlay;
     margin: 0;
 }
 .main__title, .bayan__list, .bayan__item, .bayan__content, .bayan_check, .bayan__text, .close__btn, .fa, .fa-times, .img {
-    transition: all 0.25s;
+    transition: all 0.125s;
 }
 main {
     display: flex;
@@ -33,13 +34,15 @@ main {
     flex-wrap: wrap;
     width: 100%;
     border-top: 0.125em solid rgb(175, 175, 175);
-    cursor: pointer;
     color: rgb(25, 98, 208);
+    cursor: pointer;
 }
 .bayan__content {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     padding: 1rem 0;
+    cursor: pointer;
     justify-content: space-between;
     font-size: 1.25rem;
 }
@@ -52,10 +55,15 @@ main {
     visibility: hidden;
     rotate: 45deg;
 }
+.bayan__line {
+    display: inline-block;
+    width: 100%;
+}
 .img {
     width: 50%;
     margin: 0 auto;
     height: 0;
+    cursor: pointer;
     /* background-image: url(); */
     background-color: aqua;
     background-repeat: no-repeat;
@@ -66,11 +74,14 @@ main {
     rotate: 0deg;
     color: black;
 }
-.bayan_check:checked ~ .img, .bayan__item:hover > .img {
+.bayan_check:checked ~ .img, .bayan__item:hover .img {
     height: 20rem;
     margin-bottom: 1rem;
 }
-.bayan__list:hover  .close__btn {
+.bayan__item:active .bayan__content, .bayan__item:active .img {
+    opacity: 0.7;
+}
+.bayan__list:hover .close__btn {
     opacity: 1;
     visibility: visible;
 }
@@ -80,7 +91,7 @@ main {
 .bayan_check:checked ~ .bayan__text {
     color: black;
 }
-.bayan__content+.bayan_check:checked ~ .img {
+/* .bayan__content+.bayan_check:checked ~ .img {
     height: 20rem;
     margin-bottom: 1rem;
-}
+} */
